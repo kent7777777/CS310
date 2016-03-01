@@ -1,10 +1,11 @@
 #include <stdio.h>
 
 int main(){
-	int c;
+	char c;
 	int n = 0;
+	printf("Enter a number:");
 	
-	while(!(c = getchar()).Equals('.')){}
+	while((c = getchar()) != '.'){}
 	
 	while((c = getchar()) != EOF){
 		n++;
