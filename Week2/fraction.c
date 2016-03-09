@@ -37,10 +37,10 @@ void comparefrac(Fraction f1, Fraction f2){
 	if((f1.num == f2.num) && (f1.den == f2.den)){
 		printf("%d/%d = %d/%d\n", f1.num, f1.den, f2.num, f2.den);
 	}
-	float num1 = itof(f1.num);
-	float den1 = itof(f1.den);
-	float num2 = itof(f2.num);
-	float den2 = itof(f2.den);
+	float num1 = f1.num + 0.0;
+	float den1 = f1.den + 0.0;
+	float num2 = f2.num + 0.0;
+	float den2 = f2.den + 0.0;
 	float val1 = num1/den1;
 	float val2 = num2/den2;
 	if(val1 > val2){
@@ -51,8 +51,10 @@ void comparefrac(Fraction f1, Fraction f2){
 }
 
 int main(){
-	Fraction f1 = makeFraction(6, 9);
-	Fraction f2 = makeFraction(4, 8);
+	Fraction f1;
+	f1 = MakeFraction(6, 9);
+	Fraction f2;
+	f2 = MakeFraction(4, 8);
 	comparefrac(f1, f2);
 }
 	
